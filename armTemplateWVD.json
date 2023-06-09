@@ -54,13 +54,7 @@
         "customize": [
 
 
-          {
-            "type": "PowerShell",
-            "name": "installFsLogix",
-            "runElevated": true,
-            "runAsSystem": true,
-            "scriptUri": "https://raw.githubusercontent.com/RamonImpara/AVD/main/InstallFsLogix.ps1"
-          },
+
           {
             "type": "PowerShell",
             "name": "OptimizeOS",
