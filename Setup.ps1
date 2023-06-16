@@ -35,7 +35,7 @@ New-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identit
 $identityNameResourceId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).Id
 $identityNamePrincipalId=$(Get-AzUserAssignedIdentity -ResourceGroupName $imageResourceGroup -Name $identityName).PrincipalId
 
-$aibRoleImageCreationUrl="https://raw.githubusercontent.com/azure/azvmimagebuilder/main/solutions/12_Creating_AIB_Security_Roles/aibRoleImageCreation.json"
+$aibRoleImageCreationUrl="https://raw.githubusercontent.com/RamonImpara/AVD/main/aibRoleImageCreation.json"
 $aibRoleImageCreationPath = "aibRoleImageCreation.json"
 
 # Download the config
@@ -52,7 +52,7 @@ New-AzRoleDefinition -InputFile  ./aibRoleImageCreation.json
 New-AzRoleAssignment -ObjectId $identityNamePrincipalId -RoleDefinitionName $imageRoleDefName -Scope "/subscriptions/$subscriptionID/resourceGroups/$imageResourceGroup"
 
 
-$sigGalleryName= "AVD-AIB-Gallery"
+$sigGalleryName= "AVD_AIB_Gallery"
 $imageDefName ="win10avd"
 
 # Create the gallery
