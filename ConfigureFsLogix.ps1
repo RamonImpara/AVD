@@ -1,8 +1,8 @@
 ﻿$fileServer="avdaadstorage.file.core.windows.net"
 $profileShare="\\$($fileServer)\profiles"
 
-$user="localhost\imparaprofilescontainer"
-$secret="991awnr1LJ11JWa2ejAXnGW7FKY/3SONg7ZAp5eO1G1HXA9RTAhpSCy+O77XhqMb1anVhEh8/DKM+ASt+GVfig=="
+$user="localhost\"
+$secret=""
 
 New-Item -Path "HKLM:\SOFTWARE" -Name "FSLogix" -ErrorAction Ignore
 New-Item -Path "HKLM:\SOFTWARE\FSLogix" -Name "Profiles" -ErrorAction Ignore
